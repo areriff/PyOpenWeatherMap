@@ -2,8 +2,8 @@ from sense_hat import SenseHat
 from time import sleep
 sense = SenseHat()
 
-X = [255, 0, 0]  # Red
-O = [255, 255, 255]  # White
+X = [100, 0, 0]  # Red
+O = [100, 100, 100]  # White
 
 blankLetter = [
 O, O, O, O, O, O, O, O,
