@@ -16,7 +16,7 @@ O, O, O, O, O, O, O, O,
 O, O, O, O, O, O, O, O,
 ]
 
-letterA = [
+LetterA = [
 O, O, O, X, X, O, O, O,
 O, O, X, O, O, X, O, O,
 O, O, X, O, O, X, O, O,
@@ -82,7 +82,21 @@ O, X, O, O, O, O, O, O,
 O, X, O, O, O, O, O, O,
 ]
 
-sense.set_pixels(letterA)
+def place(theLetter, intensity):
+    X = [intensity, 0, 0]  # Red
+    O = [intensity, intensity, intensity]  # White
+    sense.set_pixels(theLetter)
+
+count = 100
+while count > 0:
+    place(LetterA, count)
+    sleep(0.2)
+    count -= 10
+
+sense.clear()
+exit()
+
+sense.set_pixels(LetterA)
 sleep(0.5)
 sense.set_pixels(LetterB)
 sleep(0.5)
